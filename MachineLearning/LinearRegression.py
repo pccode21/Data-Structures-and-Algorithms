@@ -81,7 +81,7 @@ def plot_X1_X2(X):
     plt.show()
 
 
-def linearRegression(alpha=0.01, num_iters=400):
+def linearRegression(alpha=0.03, num_iters=800):
     print('加载数据...\n')
     data = loadtxtAndcsv_data('data.csv', ',', np.float64)  # 读取数据
     # Python的浮点数通常是64位浮点数，几乎等同于
@@ -99,7 +99,7 @@ def linearRegression(alpha=0.01, num_iters=400):
     # numpy.hstack（tup ）水平（按列）顺序堆叠数组
     # np.ones((m, 1))返回给定形状和类型的新数组，表示填充m行一列 1
     print('\n执行梯度下降算法....\n')
-    theta = np.zeros((col, 1))
+    theta = np.zeros((3, 1))
     print(y)
     y = y.reshape(-1, 1)   # 将行向量转化为列，表示任意行 1列
     # reshape（行，列）可以根据指定的数值将数据转换为特定的行数和列数，这个好理解，就是转换成矩阵。
@@ -128,7 +128,7 @@ def predict(mu, sigma, theta):
 
 # 测试linearRegression函数
 def testLinearRegression():
-    mu, sigma, theta = linearRegression(0.03, 400)
+    mu, sigma, theta = linearRegression(0.03, 800)
     print("\n计算的theta值为：\n", theta)
     print("\n预测结果为：%f" % predict(mu, sigma, theta))
 
