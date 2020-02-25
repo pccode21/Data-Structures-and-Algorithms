@@ -1,3 +1,4 @@
+# Python函数都是对象
 import re
 
 states = ['   Alabama ', 'Georgia!', 'Georgia', 'georgia', 'FlOrIda',
