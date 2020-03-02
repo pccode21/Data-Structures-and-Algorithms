@@ -117,8 +117,13 @@ class BST:  # 定义二叉查找树类
             print(node.data)
 
 
-a = [49, 38, 65, 97, 60, 76, 13, 27, 5, 1]
-bst = BST(a)  # 创建二叉查找树
-bst.inOrderTraverse(bst.root)  # 中序遍历
-bst.delete(bst.root, 49)  # 删除数字 49
-bst.inOrderTraverse(bst.root)  # 重新中序遍历
+def main():
+    a = [49, 38, 65, 97, 60, 76, 13, 27, 5, 1]
+    bst = BST(a)  # 创建二叉查找树
+    bst.inOrderTraverse(bst.root)  # 中序遍历
+    bst.delete(bst.root, 49)  # 删除数字 49
+    bst.inOrderTraverse(bst.root)  # 重新中序遍历
+
+
+if __name__ == '__main__':
+    main()
