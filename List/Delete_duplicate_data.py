@@ -1,3 +1,5 @@
+"""只能用于数字"""
+
 List = [1, 3, 6, 3, 2, 2, 3, 4, 5, 4, 6, 7]
 if List:
     List.sort(reverse=True)  # 把 List 重新排序，默认是升序
@@ -17,3 +19,14 @@ if List:
         else:
             last = List[i]  # 如果列表扫描一遍没有与最后的值相同的值，则将倒数第二的值做为最后的值，重新扫描
     print(List)
+
+    """如何从Python列表中删除重复项"""
+
+mylist = ["a", "b", "a", "c", "c"]
+mylist = list(dict.fromkeys(mylist))
+print(mylist)
+"""
+从列表中删除重复项
+使用“列表”项作为键来创建字典。这将自动删除所有重复项，因为字典不能具有重复键
+然后，将字典转换回列表
+"""
