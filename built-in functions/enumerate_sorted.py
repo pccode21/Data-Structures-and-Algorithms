@@ -12,8 +12,15 @@ for i, v in enumerate(some_list[::-1], start=1):  # 可以设定索引从1开始
 print(mapping)
 a = sorted([7, 1, 2, 6, 0, 3, 2])
 print(a)
+s = ["1bd", "5s", "354d", "4ghds"]
+s1 = sorted(s, key=lambda x: x[0])  # 按列表中每个元素的[0]位排序
+print(s1)
+s2 = sorted(s, key=len)  # 按每个元素的长度排序
+print(s2)
 """
 {'foo': 0, 'bar': 1, 'baz': 2}
 {'foo': 1, 'bar': 2, 'baz': 3}
 [0, 1, 2, 2, 3, 6, 7]
+['1bd', '354d', '4ghds', '5s']
+['5s', '1bd', '354d', '4ghds']
 """

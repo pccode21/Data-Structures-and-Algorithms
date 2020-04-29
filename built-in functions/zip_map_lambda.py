@@ -48,3 +48,9 @@ sq2 = map(lambda x: x**2, [1, 2, 3, 4])  # 使用 lambda 匿名函数
 print(list(sq2))
 sq3 = map(lambda x, y: x + y, [1, 2, 3, 4], [2, 3, 4, 5])  # 提供了两个列表，对相同位置的列表数据进行相加
 print(list(sq3))
+s = ["1bd", "5s", "354d", "4ghds"]
+s1 = list(map(lambda x: x[:2], s))  # 对每个元素截取前两位，list是将生成器对象转换为列表
+print(s1)
+"""列表推导式写法"""
+s1 = [i[:2] for i in s]
+print(s1)
