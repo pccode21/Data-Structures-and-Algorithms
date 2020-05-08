@@ -17,10 +17,16 @@ s1 = sorted(s, key=lambda x: x[0])  # 按列表中每个元素的[0]位排序
 print(s1)
 s2 = sorted(s, key=len)  # 按每个元素的长度排序
 print(s2)
+a = [[2,3],[4,1],(2,8),(2,1),(3,4)]
+b = sorted(a,key=lambda x: (x[0], x[1]))
+c = sorted(a,key=lambda x: (x[0], -x[1]))
+print(b, '\n', c)
 """
 {'foo': 0, 'bar': 1, 'baz': 2}
 {'foo': 1, 'bar': 2, 'baz': 3}
 [0, 1, 2, 2, 3, 6, 7]
 ['1bd', '354d', '4ghds', '5s']
 ['5s', '1bd', '354d', '4ghds']
+[(2, 1), [2, 3], (2, 8), (3, 4), [4, 1]]
+ [(2, 8), [2, 3], (2, 1), (3, 4), [4, 1]]
 """
