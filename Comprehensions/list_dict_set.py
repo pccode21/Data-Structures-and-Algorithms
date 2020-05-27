@@ -69,3 +69,11 @@ print(new_datas1)
 """
 [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 """
+def multiply_5(val):
+    return val * 5
+a = [10,20,30,40,50]
+a_val = [val for val in map(multiply_5, a)]
+print(a_val)
+"""
+[50, 100, 150, 200, 250]
+"""
