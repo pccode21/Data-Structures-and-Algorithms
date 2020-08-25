@@ -12,3 +12,9 @@ print(s)
 """使用列表推导式替换如下："""
 s = [x for x in range(10) if x%2==0]
 print(s)
+"""
+分割字符串
+"""
+msg='hello----world'
+print(list(filter(None, msg.split('-'))))
+print(list(filter(lambda item: True if item else False, msg.split('-'))))
