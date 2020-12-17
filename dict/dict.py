@@ -63,3 +63,16 @@ print(dict(by_letter2))  # 要使用dict()将列表转换成字典
 """
 {'a': ['apple', 'atom'], 'b': ['bat', 'bar', 'book']}
 """
+
+dic1 = {'1': 'india','2': 'america','3': 'china'}
+dic2 = {'A1':'india','A2':'india' ,'A3':'america','A4':'india' ,'A5': 'china','A6': 'india','A7': 'america' }
+tmp = {v: k for k, v in dic1.items()}
+tmp
+dic3 = defaultdict(list)
+for k, v in dic2.items():
+    dic3[tmp[v]].append(k)
+dic3 = dict(dic3)
+dic3
+"""
+{'1': ['A1', 'A2', 'A4', 'A6'], '2': ['A3', 'A7'], '3': ['A5']}
+"""
